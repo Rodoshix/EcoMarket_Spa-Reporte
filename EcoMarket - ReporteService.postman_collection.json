@@ -1,0 +1,107 @@
+{
+	"info": {
+		"_postman_id": "b3000c84-fbfc-458c-a6ec-b443ebc71417",
+		"name": "EcoMarket - ReporteService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "43955048"
+	},
+	"item": [
+		{
+			"name": "Reporte Ventas por Rango de Fechas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8086/api/reportes/ventas?desde=2025-01-01&hasta=2025-12-31",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8086",
+					"path": [
+						"api",
+						"reportes",
+						"ventas"
+					],
+					"query": [
+						{
+							"key": "desde",
+							"value": "2025-01-01"
+						},
+						{
+							"key": "hasta",
+							"value": "2025-12-31"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reporte Ventas por Usuario con Fechas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8086/api/reportes/ventas/usuario/cliente@example.com?desde=2025-01-01&hasta=2025-12-31",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8086",
+					"path": [
+						"api",
+						"reportes",
+						"ventas",
+						"usuario",
+						"cliente@example.com"
+					],
+					"query": [
+						{
+							"key": "desde",
+							"value": "2025-01-01"
+						},
+						{
+							"key": "hasta",
+							"value": "2025-12-31"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reporte Ventas por Producto con Fechas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8086/api/reportes/ventas/producto/1?desde=2025-01-01&hasta=2025-12-31",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8086",
+					"path": [
+						"api",
+						"reportes",
+						"ventas",
+						"producto",
+						"1"
+					],
+					"query": [
+						{
+							"key": "desde",
+							"value": "2025-01-01"
+						},
+						{
+							"key": "hasta",
+							"value": "2025-12-31"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
