@@ -1,4 +1,4 @@
-package com.ecomarket.reporte;
+package com.ecomarket.reporte.performance;
 
 import com.ecomarket.reporte.dto.ReporteVentasDTO;
 import com.ecomarket.reporte.services.ReporteService;
