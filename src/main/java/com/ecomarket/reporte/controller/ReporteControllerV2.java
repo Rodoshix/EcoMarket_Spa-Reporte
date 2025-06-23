@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.time.LocalDate;
 
 @RestController
-@RequestMapping("/api/v2/reportes")
+@RequestMapping(value = "/api/v2/reportes", produces = "application/json")
 public class ReporteControllerV2 {
 
     @Autowired
@@ -21,7 +21,7 @@ public class ReporteControllerV2 {
     @Autowired
     private ReporteAssembler reporteAssembler;
 
-    @GetMapping("/ventas")
+    @GetMapping(value = "/ventas", produces = "application/json")
     public EntityModel<ReporteVentasDTO> obtenerReporteVentasV2(
             @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate desde,
             @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate hasta
@@ -30,7 +30,7 @@ public class ReporteControllerV2 {
         return reporteAssembler.toModel(dto);
     }
 
-    @GetMapping("/ventas/usuario/{email}")
+    @GetMapping(value = "/ventas/usuario/{email}", produces = "application/json")
     public EntityModel<ReporteVentasDTO> reportePorUsuarioV2(
             @PathVariable String email,
             @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate desde,
@@ -40,7 +40,7 @@ public class ReporteControllerV2 {
         return reporteAssembler.toModel(dto);
     }
 
-    @GetMapping("/ventas/producto/{idProducto}")
+    @GetMapping(value = "/ventas/producto/{idProducto}", produces = "application/json")
     public EntityModel<ReporteVentasDTO> reportePorProductoV2(
             @PathVariable Long idProducto,
             @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate desde,
